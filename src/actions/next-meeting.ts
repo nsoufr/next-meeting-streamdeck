@@ -62,7 +62,9 @@ export class NextMeeting extends SingletonAction<Settings> {
 		this.fetching = true;
 		try {
 			this.last = await fetchNextEvent();
-			streamDeck.logger.info(`next event: ${JSON.stringify(this.last)}`);
+			// Status only: titles and locations are personal data and don't belong in logs.
+			const at = this.last.status === "ok" ? ` at ${this.last.event.start.toISOString()}` : "";
+			streamDeck.logger.info(`next event: ${this.last.status}${at}`);
 		} finally {
 			this.fetching = false;
 		}
