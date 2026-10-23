@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schemas.elgato.com/streamdeck/plugins/layout.json",
+	"id": "next-meeting-infobar",
+	"controller": "Neo",
+	"items": [
+		{
+			"key": "icon",
+			"type": "pixmap",
+			"rect": [8, 11, 28, 28],
+			"value": "imgs/actions/next-meeting/calendar.svg"
+		},
+		{
+			"key": "name",
+			"type": "text",
+			"rect": [44, 3, 182, 24],
+			"alignment": "left",
+			"font": { "size": 16, "weight": 600 },
+			"text-overflow": "ellipsis",
+			"color": "white",
+			"value": "Next Meeting"
+		},
+		{
+			"key": "when",
+			"type": "text",
+			"rect": [44, 28, 182, 20],
+			"alignment": "left",
+			"font": { "size": 13, "weight": 400 },
+			"text-overflow": "ellipsis",
+			"color": "#9aa0a6",
+			"value": "loading…"
+		}
+	]
+}

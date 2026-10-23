@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+	"Name": "Next Meeting",
+	"Version": "0.1.0.0",
+	"Author": "Nando Sousa",
+	"Description": "Shows your next Apple Calendar event on the Stream Deck Neo Infobar.",
+	"Icon": "imgs/plugin/icon",
+	"Category": "Next Meeting",
+	"CategoryIcon": "imgs/plugin/category-icon",
+	"CodePath": "bin/plugin.js",
+	"SDKVersion": 3,
+	"Nodejs": {
+		"Version": "20",
+		"Debug": "enabled"
+	},
+	"OS": [
+		{
+			"Platform": "mac",
+			"MinimumVersion": "14"
+		}
+	],
+	"Software": {
+		"MinimumVersion": "7.6"
+	},
+	"UUID": "com.nando.next-meeting",
+	"Actions": [
+		{
+			"Name": "Next Meeting",
+			"UUID": "com.nando.next-meeting.infobar",
+			"Icon": "imgs/actions/next-meeting/icon",
+			"Tooltip": "Shows the next event from Apple Calendar.",
+			"Controllers": ["Neo"],
+			"SupportedInMultiActions": false,
+			"UserTitleEnabled": false,
+			"States": [
+				{
+					"Image": "imgs/actions/next-meeting/key"
+				}
+			]
+		}
+	]
+}

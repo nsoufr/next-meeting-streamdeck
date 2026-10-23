@@ -1,0 +1,5 @@
+node_modules/
+com.nando.next-meeting.sdPlugin/bin/
+com.nando.next-meeting.sdPlugin/helper/
+com.nando.next-meeting.sdPlugin/logs/
+.DS_Store

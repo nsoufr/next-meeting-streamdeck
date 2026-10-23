@@ -1,0 +1,21 @@
+{
+	"name": "next-meeting-streamdeck",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Stream Deck Neo infobar action showing the next Apple Calendar event.",
+	"scripts": {
+		"build:helper": "sh helper/build.sh",
+		"build:plugin": "esbuild src/plugin.ts --bundle --platform=node --target=node20 --format=cjs --outfile=com.nando.next-meeting.sdPlugin/bin/plugin.js",
+		"build": "npm run build:helper && npm run build:plugin",
+		"watch": "npm run build:plugin -- --watch",
+		"typecheck": "tsc --noEmit",
+		"link": "streamdeck link com.nando.next-meeting.sdPlugin",
+		"restart": "streamdeck restart com.nando.next-meeting"
+	},
+	"devDependencies": {
+		"@elgato/streamdeck": "^3",
+		"@types/node": "^20",
+		"esbuild": "^0.25",
+		"typescript": "^5"
+	}
+}
